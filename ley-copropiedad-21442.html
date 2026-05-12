@@ -31,7 +31,7 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --navy: #041122;
       --navy-mid: #061830;
@@ -51,13 +51,13 @@
       --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body: 'Outfit', system-ui, sans-serif;
     }
-
+ 
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); background: var(--navy); color: #fff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
     ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: var(--navy); }
     ::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 99px; }
-
+ 
     /* ── NAV ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 15px 64px; display: flex; align-items: center; justify-content: space-between; transition: background 0.5s ease, border-bottom 0.5s ease, padding 0.3s ease; }
     nav.scrolled { background: rgba(4,17,34,0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--gold-border); padding: 16px 64px; }
@@ -73,10 +73,10 @@
     .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .nav-hamburger span { width: 22px; height: 1px; background: #fff; display: block; transition: all 0.3s ease; }
-
+ 
     /* ── HERO ARTÍCULO ── */
     .article-hero {
-      padding: 140px 0 80px;
+      padding: 160px 0 80px;
       background: var(--navy);
       border-bottom: 1px solid var(--gold-border);
       position: relative;
@@ -92,7 +92,7 @@
     }
     .container { max-width: 1400px; margin: 0 auto; padding: 0 64px; }
     .article-container { max-width: 860px; margin: 0 auto; padding: 0 64px; }
-
+ 
     .breadcrumb {
       display: flex;
       align-items: center;
@@ -101,11 +101,13 @@
       font-size: 0.8125rem;
       color: var(--w40);
       font-weight: 300;
+      position: relative;
+      z-index: 2;
     }
     .breadcrumb a { color: var(--gold); text-decoration: none; transition: color 0.2s; }
     .breadcrumb a:hover { color: var(--gold-light); }
     .breadcrumb span { color: var(--w20); }
-
+ 
     .article-label {
       display: inline-flex;
       align-items: center;
@@ -118,7 +120,7 @@
       margin-bottom: 24px;
     }
     .article-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
-
+ 
     .article-title {
       font-family: var(--font-display);
       font-size: clamp(2.5rem, 4.5vw, 4.5rem);
@@ -129,7 +131,7 @@
       margin-bottom: 28px;
     }
     .article-title em { font-style: italic; color: var(--gold); }
-
+ 
     .article-meta {
       display: flex;
       align-items: center;
@@ -150,12 +152,12 @@
     }
     .meta-item svg { width: 14px; height: 14px; stroke: var(--gold); stroke-width: 1.5; fill: none; }
     .meta-item strong { color: var(--w60); font-weight: 400; }
-
+ 
     /* ── ARTICLE BODY ── */
     .article-body {
       padding: 72px 0;
     }
-
+ 
     .article-content h2 {
       font-family: var(--font-display);
       font-size: clamp(1.75rem, 2.5vw, 2.5rem);
@@ -167,7 +169,7 @@
       line-height: 1.15;
     }
     .article-content h2:first-child { margin-top: 0; }
-
+ 
     .article-content h3 {
       font-family: var(--font-display);
       font-size: 1.5rem;
@@ -177,7 +179,7 @@
       margin-top: 40px;
       margin-bottom: 14px;
     }
-
+ 
     .article-content p {
       font-size: 1.0625rem;
       line-height: 1.85;
@@ -185,9 +187,9 @@
       font-weight: 300;
       margin-bottom: 20px;
     }
-
+ 
     .article-content strong { color: var(--w80); font-weight: 500; }
-
+ 
     .article-content ul, .article-content ol {
       margin: 20px 0 28px 0;
       padding-left: 0;
@@ -223,7 +225,7 @@
       color: var(--gold);
       font-weight: 400;
     }
-
+ 
     /* ── HIGHLIGHT BOX ── */
     .highlight-box {
       border: 1px solid var(--gold-border);
@@ -252,7 +254,7 @@
       font-weight: 400;
       display: block;
     }
-
+ 
     /* ── INFO TABLE ── */
     .info-table {
       width: 100%;
@@ -280,7 +282,7 @@
       vertical-align: top;
     }
     .info-table tr:hover td { background: var(--w05); }
-
+ 
     /* ── SECTION DIVIDER ── */
     .section-divider {
       display: flex;
@@ -301,7 +303,7 @@
       color: var(--gold);
       white-space: nowrap;
     }
-
+ 
     /* ── CTA BANNER ── */
     .cta-banner {
       background: var(--navy-card);
@@ -347,7 +349,7 @@
       white-space: nowrap;
     }
     .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
-
+ 
     /* ── SIDEBAR / ÍNDICE ── */
     .article-layout {
       display: grid;
@@ -393,7 +395,7 @@
     .sidebar-nav a:hover { color: var(--gold); }
     .sidebar-nav a:hover::before { background: var(--gold); }
     .sidebar-nav li:last-child a { border-bottom: none; }
-
+ 
     .sidebar-cta {
       border: 1px solid var(--gold-border);
       padding: 28px;
@@ -423,7 +425,7 @@
       transition: background 0.2s ease;
     }
     .btn-gold-sm:hover { background: var(--gold-light); }
-
+ 
     /* ── TAGS ── */
     .article-tags {
       display: flex;
@@ -442,7 +444,7 @@
       padding: 6px 16px;
       font-weight: 400;
     }
-
+ 
     /* ── AUTHOR ── */
     .author-card {
       display: flex;
@@ -465,7 +467,7 @@
     .author-name { font-family: var(--font-display); font-size: 1.25rem; font-weight: 400; color: #fff; margin-bottom: 4px; }
     .author-role { font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
     .author-bio { font-size: 0.9375rem; color: var(--w50); font-weight: 300; line-height: 1.7; }
-
+ 
     /* ── RELATED ── */
     .related-section { background: var(--navy-mid); border-top: 1px solid var(--gold-border); padding: 72px 0; }
     .section-label { display: inline-flex; align-items: center; gap: 12px; font-size: 0.6875rem; font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
@@ -484,7 +486,7 @@
     .related-title { font-family: var(--font-display); font-size: 1.375rem; font-weight: 400; color: #fff; line-height: 1.25; margin-bottom: 12px; }
     .related-desc { font-size: 0.875rem; color: var(--w50); font-weight: 300; line-height: 1.65; }
     .related-arrow { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--gold); margin-top: 20px; letter-spacing: 0.06em; }
-
+ 
     /* ── FOOTER ── */
     footer { background: #020d1a; padding: 56px 0 32px; border-top: 1px solid var(--gold-border); }
     .footer-top { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 64px; border-bottom: 1px solid var(--w10); }
@@ -503,11 +505,11 @@
     .footer-social:hover { border-color: var(--gold-border); }
     .footer-social svg { width: 15px; height: 15px; stroke: var(--w50); stroke-width: 1.5; fill: none; transition: stroke 0.2s ease; }
     .footer-social:hover svg { stroke: var(--gold); }
-
+ 
     /* ── REVEAL ── */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1); }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-
+ 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .article-layout { grid-template-columns: 1fr; padding: 0 24px; }
@@ -535,7 +537,7 @@
   </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
   <a href="./index.html" class="nav-logo">
@@ -557,17 +559,10 @@
     <span></span><span></span><span></span>
   </div>
 </nav>
-
+ 
 <!-- HERO ARTÍCULO -->
 <header class="article-hero">
   <div class="article-container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="./index.html">Inicio</a>
-      <span>›</span>
-      <a href="./blog.html">Blog</a>
-      <span>›</span>
-      <span>Ley de Copropiedad 21.442</span>
-    </nav>
     <div class="article-label">Legislación · Copropiedad</div>
     <h1 class="article-title">Ley de Copropiedad<br>Inmobiliaria <em>21.442</em><br>explicada</h1>
     <p style="font-size:1.0625rem;color:var(--w60);font-weight:300;line-height:1.8;max-width:56ch;margin-top:20px;">Todo lo que un comité de administración, propietario o administrador debe saber sobre la normativa vigente que regula los edificios y condominios en Chile.</p>
@@ -587,45 +582,45 @@
     </div>
   </div>
 </header>
-
+ 
 <!-- CUERPO DEL ARTÍCULO -->
 <main class="article-body">
   <div class="article-layout">
-
+ 
     <!-- CONTENIDO PRINCIPAL -->
     <article class="article-content" id="article-main">
-
+ 
       <h2 id="que-es">¿Qué es la Ley de Copropiedad 21.442?</h2>
       <p>La <strong>Ley 21.442 de Copropiedad Inmobiliaria</strong>, publicada en el Diario Oficial el 13 de abril de 2022, reemplazó a la antigua Ley 19.537 y modernizó completamente el marco legal que regula la convivencia y administración de edificios y condominios en Chile.</p>
       <p>Esta ley establece los derechos y obligaciones de todos los actores de una comunidad: propietarios, arrendatarios, comité de administración y el administrador. Su objetivo es garantizar una gestión más transparente, democrática y eficiente de los bienes comunes.</p>
-
+ 
       <div class="highlight-box">
         <span class="highlight-label">Dato clave</span>
         <p>La Ley 21.442 entró en vigencia plena en 2023 y todas las comunidades de Chile deben ajustar sus reglamentos internos a esta normativa. Si su condominio aún opera bajo la antigua ley, está en incumplimiento legal.</p>
       </div>
-
+ 
       <h2 id="ambito">Ámbito de aplicación</h2>
       <p>La ley aplica a todos los condominios del país, clasificados en dos tipos:</p>
       <ul>
         <li><strong>Condominios Tipo A:</strong> Construcciones en altura (edificios de departamentos), donde los copropietarios comparten bienes comunes como ascensores, escaleras, pasillos y estacionamientos.</li>
         <li><strong>Condominios Tipo B:</strong> Conjuntos de viviendas en terrenos con bienes comunes como calles interiores, áreas verdes, piscinas y recintos deportivos.</li>
       </ul>
-
+ 
       <h2 id="organos">Órganos de administración</h2>
       <p>La ley define tres órganos principales que gobiernan un condominio:</p>
-
+ 
       <h3 id="asamblea">1. La Asamblea de Copropietarios</h3>
       <p>Es el órgano supremo de la comunidad. Todas las decisiones importantes deben ser aprobadas en asamblea. Existen dos tipos:</p>
       <ul>
         <li><strong>Asamblea Ordinaria:</strong> Se realiza al menos una vez al año, dentro de los primeros cuatro meses. Aprueba el presupuesto, los estados financieros y elije el comité.</li>
         <li><strong>Asamblea Extraordinaria:</strong> Se convoca cuando es necesario tomar decisiones urgentes o que requieren quórum especial, como obras mayores o cambio de administrador.</li>
       </ul>
-
+ 
       <div class="highlight-box">
         <span class="highlight-label">Novedad importante</span>
         <p>La Ley 21.442 permite celebrar asambleas por <strong>videoconferencia</strong>, lo que facilita la participación de propietarios que no pueden asistir presencialmente. El reglamento interno debe regular esta modalidad.</p>
       </div>
-
+ 
       <h3 id="comite">2. El Comité de Administración</h3>
       <p>Es el órgano ejecutivo que representa a la asamblea entre reuniones. Sus principales atribuciones son:</p>
       <ul>
@@ -636,7 +631,7 @@
         <li>Representar a la comunidad ante terceros y organismos públicos</li>
       </ul>
       <p>El comité debe estar compuesto por al menos <strong>3 miembros</strong> elegidos en asamblea y su mandato no puede superar <strong>3 años</strong>, pudiendo ser reelegidos.</p>
-
+ 
       <h3 id="administrador">3. El Administrador</h3>
       <p>Es la persona natural o jurídica encargada de la gestión diaria del condominio. La Ley 21.442 aumentó significativamente sus obligaciones y responsabilidades:</p>
       <ul>
@@ -647,12 +642,12 @@
         <li>Mantener al día todos los seguros obligatorios del condominio</li>
         <li>Conservar y custodiar los libros y documentos de la comunidad</li>
       </ul>
-
+ 
       <div class="section-divider"><span>Gastos comunes</span></div>
-
+ 
       <h2 id="gastos-comunes">Gastos comunes: tipos y obligaciones</h2>
       <p>Los gastos comunes son las contribuciones que cada copropietario debe pagar para financiar la operación y mantención del condominio. La ley los clasifica en:</p>
-
+ 
       <table class="info-table">
         <thead>
           <tr>
@@ -679,7 +674,7 @@
           </tr>
         </tbody>
       </table>
-
+ 
       <h3>Consecuencias del no pago</h3>
       <p>La Ley 21.442 establece mecanismos expeditos para cobrar las deudas de gastos comunes:</p>
       <ul>
@@ -688,9 +683,9 @@
         <li>Los copropietarios con deudas superiores a 3 meses no pueden votar en asambleas</li>
         <li>Las deudas de gastos comunes gravan la unidad y se transfieren al nuevo propietario en caso de venta</li>
       </ul>
-
+ 
       <div class="section-divider"><span>Reglamento interno</span></div>
-
+ 
       <h2 id="reglamento">El Reglamento de Copropiedad</h2>
       <p>Cada condominio debe contar con un <strong>Reglamento de Copropiedad</strong> que regule la convivencia interna. Con la Ley 21.442, este documento debe ser actualizado para incluir:</p>
       <ul>
@@ -701,14 +696,14 @@
         <li>El régimen de multas y sanciones por infracciones</li>
         <li>Los mecanismos de resolución de conflictos entre copropietarios</li>
       </ul>
-
+ 
       <div class="highlight-box">
         <span class="highlight-label">Importante</span>
         <p>Si el reglamento de su condominio fue redactado antes de abril de 2022 y no ha sido actualizado, puede contener cláusulas que contradigan la Ley 21.442 y por lo tanto son inaplicables. Es fundamental realizar una revisión legal con un abogado especializado en copropiedad.</p>
       </div>
-
+ 
       <div class="section-divider"><span>Novedades principales</span></div>
-
+ 
       <h2 id="novedades">Principales cambios respecto a la ley anterior</h2>
       <p>La Ley 21.442 introdujo importantes modificaciones que todo propietario debe conocer:</p>
       <ol>
@@ -720,7 +715,7 @@
         <li><strong>Cobro expedito:</strong> Se simplifica el procedimiento de cobro de gastos comunes impagos.</li>
         <li><strong>Fondo de reserva obligatorio:</strong> Se refuerza la obligatoriedad de mantener un fondo de reserva mínimo del 5% del presupuesto ordinario.</li>
       </ol>
-
+ 
       <div class="cta-banner">
         <div>
           <h3>¿Su comunidad cumple con la Ley 21.442?</h3>
@@ -731,21 +726,21 @@
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
         </a>
       </div>
-
+ 
       <h2 id="preguntas">Preguntas frecuentes sobre la Ley 21.442</h2>
-
+ 
       <h3>¿Pueden los arrendatarios asistir a las asambleas?</h3>
       <p>Los arrendatarios pueden asistir a las asambleas con derecho a voz pero <strong>no a voto</strong>, salvo que el propietario les haya delegado expresamente su representación mediante poder notarial. El derecho a voto siempre reside en el propietario.</p>
-
+ 
       <h3>¿Qué pasa si el administrador no rinde cuentas?</h3>
       <p>El comité de administración puede remover al administrador en cualquier momento. Si se detectan irregularidades financieras, la comunidad puede presentar denuncia ante el Juzgado de Policía Local y, en casos graves, ante el Ministerio Público. La ley establece responsabilidad civil y penal para el administrador en caso de malversación de fondos comunes.</p>
-
+ 
       <h3>¿Cuántos votos se necesitan para cambiar de administrador?</h3>
       <p>El comité de administración puede remover al administrador por mayoría simple de sus integrantes, sin necesidad de convocar asamblea. Sin embargo, si el administrador fue elegido directamente en asamblea, se requiere asamblea extraordinaria con quórum de mayoría absoluta de los copropietarios con derecho a voto.</p>
-
+ 
       <h3>¿Cómo se calcula el gasto común de cada unidad?</h3>
       <p>El reglamento de copropiedad establece el método de cálculo. Los más comunes son: <strong>prorrateo por alícuota</strong> (porcentaje de participación de cada unidad en el total del condominio), prorrateo por partes iguales, o una combinación de ambos según el tipo de gasto.</p>
-
+ 
       <div class="article-tags">
         <span class="tag">Ley 21.442</span>
         <span class="tag">Copropiedad</span>
@@ -756,7 +751,7 @@
         <span class="tag">Chile</span>
         <span class="tag">Condominios</span>
       </div>
-
+ 
       <!-- AUTOR -->
       <div class="author-card">
         <div class="author-monogram"><span>HB</span></div>
@@ -766,9 +761,9 @@
           <p class="author-bio">Más de 30 años administrando edificios y condominios en Santiago. Nuestro equipo combina experiencia práctica en gestión residencial con asesoría legal especializada en la Ley de Copropiedad 21.442.</p>
         </div>
       </div>
-
+ 
     </article>
-
+ 
     <!-- SIDEBAR -->
     <aside class="article-sidebar">
       <div class="sidebar-card">
@@ -794,10 +789,10 @@
         </a>
       </div>
     </aside>
-
+ 
   </div>
 </main>
-
+ 
 <!-- ARTÍCULOS RELACIONADOS -->
 <section class="related-section">
   <div class="container">
@@ -825,7 +820,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -882,7 +877,7 @@
     </div>
   </div>
 </footer>
-
+ 
 <!-- Schema.org Article -->
 <script type="application/ld+json">
 {
@@ -911,7 +906,7 @@
   "inLanguage": "es-CL"
 }
 </script>
-
+ 
 <!-- FAQ Schema -->
 <script type="application/ld+json">
 {
@@ -945,25 +940,26 @@
   ]
 }
 </script>
-
+ 
 <script>
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   }, { passive: true });
-
+ 
   function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('open');
   }
   document.querySelectorAll('#navLinks a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
   });
-
+ 
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
-
+ 
 </body>
 </html>
+ 
